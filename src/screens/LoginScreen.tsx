@@ -1,4 +1,4 @@
-import type { OTPVerification } from '@dynamic-labs/sdk-api-core';
+import type { OTPVerification } from '@dynamic-labs-sdk/client';
 import { sendEmailOTP, verifyOTP } from '@dynamic-labs-sdk/client';
 import type { FC } from 'react';
 import { useState } from 'react';
@@ -80,7 +80,7 @@ export const LoginScreen: FC = () => {
         <>
           <Text>Enter the OTP sent to {otpVerification.email}</Text>
           <Input
-            keyboardType="number-pad"
+            keyboardType="numeric"
             onChangeText={setOtp}
             placeholder="OTP"
             value={otp}

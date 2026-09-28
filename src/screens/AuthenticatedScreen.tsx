@@ -1,4 +1,4 @@
-import type { BaseWalletAccount } from '@dynamic-labs-sdk/client/core';
+import type { WalletAccount } from '@dynamic-labs-sdk/client';
 import {
   getWalletAccounts,
   logout,
@@ -42,7 +42,7 @@ export const AuthenticatedScreen: FC = () => {
     }
   };
 
-  const handleSignMessage = async (walletAccount: BaseWalletAccount) => {
+  const handleSignMessage = async (walletAccount: WalletAccount) => {
     setIsLoading(true);
     setError(null);
 
